@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Titre et Description (SEO) -->
+<title>Démo Automatisation | Emeraude Agence</title>
+<meta name="description" content="Simulation d'un système d'automatisation de traitement des demandes clients. Gagnez du temps sur les tâches répétitives.">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+<!-- Balises Open Graph (Pour WhatsApp et Facebook) -->
+<meta property="og:title" content="Démo Automatisation de Processus">
+<meta property="og:description" content="Visualisez comment automatiser vos tâches répétitives.">
+<meta property="og:image" content="assets/images/partage.jpg">
+<meta property="og:type" content="website">
+
+<!-- Polices Google -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- Feuilles de style -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/widget.css">
+</head>
+<body>
+<header class="header">
+<div class="container header-container">
+<a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Logo" class="logo-img"></a>
+<nav class="nav">
+<ul class="nav-list">
+<li><a href="index.html" class="nav-link">Accueil</a></li>
+<li><a href="services.html" class="nav-link">Services</a></li>
+<li><a href="tarifs.html" class="nav-link">Tarifs</a></li>
+<li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+<li><a href="demonstrations.html" class="nav-link active">Démonstrations</a></li>
+<li><a href="a-propos.html" class="nav-link">À propos</a></li>
+</ul>
+</nav>
+<div class="header-actions">
+<a href="devis.html" class="btn btn-primary hidden-mobile">Demander un devis</a>
+<button class="menu-toggle" id="menu-toggle"><span></span><span></span><span></span></button>
+</div>
+</div>
+<div class="mobile-menu" id="mobile-menu">
+<ul>
+<li><a href="index.html" class="nav-link">Accueil</a></li>
+<li><a href="services.html" class="nav-link">Services</a></li>
+<li><a href="tarifs.html" class="nav-link">Tarifs</a></li>
+<li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+<li><a href="demonstrations.html" class="nav-link active">Démonstrations</a></li>
+<li><a href="a-propos.html" class="nav-link">À propos</a></li>
+<li><a href="devis.html" class="btn btn-primary" style="margin-top: 10px;">Demander un devis</a></li>
+</ul>
+</div>
+</header>
+
+<main>
+<section class="page-header">
+<div class="container text-center">
+<h1>Automatisation de Processus</h1>
+<p>Découvrez comment nous connectons vos outils pour éliminer les tâches répétitives.</p>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="workflow-container">
+<div class="workflow-step" id="step-trigger">
+<div class="wf-icon">📝</div>
+<h3>1. Le déclencheur</h3>
+<p>Un client remplit le formulaire de contact sur votre site.</p>
+</div>
+<div class="workflow-arrow" id="arrow-1">➔</div>
+<div class="workflow-step engine-step" id="step-engine">
+<div class="wf-icon spin-effect">⚙️</div>
+<h3>2. Le moteur</h3>
+<p>L'outil d'automatisation analyse les données entrantes.</p>
+</div>
+<div class="workflow-arrow" id="arrow-2">➔</div>
+<div class="workflow-results">
+<div class="result-card" id="result-1"><span>📧</span> E-mail de confirmation envoyé au client</div>
+<div class="result-card" id="result-2"><span>💬</span> Notification WhatsApp reçue par le gérant</div>
+<div class="result-card" id="result-3"><span>📊</span> Ligne ajoutée dans le tableau de suivi (CRM)</div>
+</div>
+</div>
+<div class="text-center mt-40">
+<button id="btn-run-workflow" class="btn btn-primary btn-large">Simuler une demande client</button>
+</div>
+<div class="demo-note text-center mt-40">
+<p><strong>Note :</strong> Cette simulation illustre un flux de travail automatisé (Workflow). Dans la réalité, des outils comme Make, Zapier ou n8n sont utilisés pour connecter ces services.</p>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+<div class="container footer-content">
+<div class="footer-brand">
+<img src="assets/images/logo.png" alt="Logo Emeraude Agence" style="height: 40px !important; width: auto !important; max-width: 150px !important; display: block; margin-bottom: 15px;">
+<p style="margin-bottom: 15px;">Solutions intelligentes pour les entreprises.</p>
+<div class="footer-contact" style="font-size: 0.95rem; line-height: 1.8;">
+<p>📞 <a href="tel:+2290151486335" style="color: var(--or); font-weight: 600;">Appel</a> / 💬 <a href="https://wa.me/2290151486335" target="_blank" style="color: var(--or); font-weight: 600;">WhatsApp</a> : 01 51 48 63 35</p>
+<p>✉️ <a href="mailto:emeraudeagence07@gmail.com" style="color: var(--or); font-weight: 600;">Email</a> : emeraudeagence07@gmail.com</p>
+</div>
+</div>
+<div class="footer-links">
+<h4>Liens utiles</h4>
+<ul>
+<li><a href="services.html">Services</a></li>
+<li><a href="tarifs.html">Tarifs</a></li>
+<li><a href="realisations.html">Réalisations</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="confidentialite.html">Politique de confidentialité</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom"><p>© 2026 Emeraude Agence. Tous droits réservés.</p></div>
+</footer>
+<!-- WIDGET DE CHAT -->
+<div id="chat-widget-window" class="chat-widget-window">
+<div class="widget-header">
+<h4>Assistant Emeraude</h4>
+<span id="chat-widget-close" class="widget-close">×</span>
+</div>
+<div id="widget-messages" class="widget-messages">
+<div class="widget-message msg-bot">Bonjour ! Je suis l'assistant d'Emeraude Agence. Comment puis-je vous aider ?</div>
+</div>
+<div class="widget-input-area">
+<input type="text" id="widget-input" placeholder="Écrivez votre message...">
+<button id="widget-send">➤</button>
+</div>
+</div>
+<button id="chat-widget-btn" class="chat-widget-btn" aria-label="Ouvrir le chat">💬</button>
+<script src="js/config.js"></script><script src="js/main.js"></script><script src="js/automatisation.js"></script>
+</body>
+</html>

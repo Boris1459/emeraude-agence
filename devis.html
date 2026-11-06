@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demander un devis | Emeraude Agence</title>
+<meta name="description" content="Remplissez notre formulaire pour recevoir une proposition adaptée à vos besoins en communication, web ou intelligence artificielle.">
+<link rel="icon" type="image/png" href="assets/images/favicon.png">
+<meta property="og:title" content="Demander un devis | Emeraude Agence">
+<meta property="og:description" content="Décrivez votre besoin et recevez une proposition sur mesure.">
+<meta property="og:image" content="assets/images/partage.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/widget.css">
+</head>
+<body>
+<header class="header">
+<div class="container header-container">
+<a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Logo" class="logo-img"></a>
+<nav class="nav">
+<ul class="nav-list">
+<li><a href="index.html" class="nav-link">Accueil</a></li>
+<li><a href="services.html" class="nav-link">Services</a></li>
+<li><a href="tarifs.html" class="nav-link">Tarifs</a></li>
+<li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+<li><a href="demonstrations.html" class="nav-link">Démonstrations</a></li>
+<li><a href="a-propos.html" class="nav-link">À propos</a></li>
+</ul>
+</nav>
+<div class="header-actions">
+<a href="devis.html" class="btn btn-primary hidden-mobile">Demander un devis</a>
+<button class="menu-toggle" id="menu-toggle"><span></span><span></span><span></span></button>
+</div>
+</div>
+<div class="mobile-menu" id="mobile-menu">
+<ul>
+<li><a href="index.html" class="nav-link">Accueil</a></li>
+<li><a href="services.html" class="nav-link">Services</a></li>
+<li><a href="tarifs.html" class="nav-link">Tarifs</a></li>
+<li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+<li><a href="demonstrations.html" class="nav-link">Démonstrations</a></li>
+<li><a href="a-propos.html" class="nav-link">À propos</a></li>
+<li><a href="devis.html" class="btn btn-primary" style="margin-top: 10px;">Demander un devis</a></li>
+</ul>
+</div>
+</header>
+
+<main>
+<section class="page-header">
+<div class="container text-center">
+<h1>Demander un devis</h1>
+<p>Remplissez ce formulaire pour nous expliquer votre besoin. Nous vous répondrons rapidement.</p>
+</div>
+</section>
+
+<section class="section">
+<div class="container form-container">
+<form id="devis-form" class="devis-form">
+<div class="form-row">
+<div class="form-group">
+<label for="nom">Nom et prénom *</label>
+<input type="text" id="nom" name="nom" placeholder="Ex: Jean Dupont" required>
+</div>
+<div class="form-group">
+<label for="entreprise">Nom de l'entreprise (facultatif)</label>
+<input type="text" id="entreprise" name="entreprise" placeholder="Ex: Mon Entreprise SARL">
+</div>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label for="telephone">Numéro de téléphone / WhatsApp *</label>
+<input type="tel" id="telephone" name="telephone" placeholder="Ex: 0151486335" required>
+</div>
+<div class="form-group">
+<label for="email">Adresse e-mail (facultatif)</label>
+<input type="email" id="email" name="email" placeholder="Ex: client@email.com">
+</div>
+</div>
+<div class="form-group">
+<label for="service">Service / Pack recherché *</label>
+<select id="service" name="service" required>
+<option value="">-- Choisissez un service ou un pack --</option>
+
+<optgroup label="📱 Communication digitale">
+<option value="Visibilité Essentiel">Visibilité Essentiel (45 000 F/mois)</option>
+<option value="Visibilité Pro">Visibilité Pro (75 000 F/mois)</option>
+<option value="Stratégie de Communication">Stratégie de Communication (50 000 F)</option>
+<option value="Vidéo Pub IA Express">Vidéo Pub IA Express (30 000 F)</option>
+<option value="Vidéo Pub IA Pro">Vidéo Pub IA Pro (75 000 F)</option>
+</optgroup>
+
+<optgroup label="🎨 Design et création numérique">
+<option value="Visuels à la carte">Visuels à la carte (10 000 F)</option>
+<option value="Identité Starter">Identité Starter (35 000 F)</option>
+<option value="Identité Complète">Identité Complète (150 000 F)</option>
+</optgroup>
+
+<optgroup label="🌐 Web, application et PWA">
+<option value="Site Vitrine Express">Site Vitrine Express (75 000 F)</option>
+<option value="Site Vitrine Pro">Site Vitrine Pro (150 000 F)</option>
+<option value="Application Basique (PWA)">Application Basique - PWA (dès 150 000 F)</option>
+<option value="Prototype d'Application Complexe">Prototype d'Application Complexe (dès 100 000 F)</option>
+</optgroup>
+
+<optgroup label="🤖 Chatbots et agents IA">
+<option value="Assistant FAQ">Assistant FAQ (90 000 F + 15k/mois)</option>
+<option value="Assistant Commercial">Assistant Commercial (150 000 F + 20k/mois)</option>
+</optgroup>
+
+<optgroup label="⚙️ Automatisation">
+<option value="Automatisation Starter">Automatisation Starter (75 000 F)</option>
+<option value="Relances et Notifications">Relances et Notifications (100 000 F)</option>
+</optgroup>
+
+<optgroup label="💡 Conseil en IA">
+<option value="Diagnostic IA">Diagnostic IA (Gratuit)</option>
+<option value="Atelier Prise en Main">Atelier Prise en Main (35 000 F)</option>
+<option value="Accompagnement Mensuel">Accompagnement Mensuel (75 000 F/mois)</option>
+</optgroup>
+
+<optgroup label="📦 Packs combinés">
+<option value="Pack Démarrage Commerce">Pack Démarrage Commerce (220 000 F)</option>
+<option value="Pack Croissance PME">Pack Croissance PME (390 000 F)</option>
+<option value="Pack Site Intelligent">Pack Site Intelligent (320 000 F + 20k/mois)</option>
+</optgroup>
+
+<option value="Autre / Sur mesure">Autre besoin / Sur mesure</option>
+</select>
+</div>
+<div class="form-group">
+<label for="description">Description de votre besoin </label>
+<textarea id="description" name="description" rows="5" placeholder="Expliquez-nous votre projet..." required></textarea>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label for="budget">Budget indicatif (facultatif)</label>
+<input type="text" id="budget" name="budget" placeholder="Ex: 50 000 FCFA">
+</div>
+<div class="form-group">
+<label for="delai">Délai souhaité (facultatif)</label>
+<input type="text" id="delai" name="delai" placeholder="Ex: Dans 2 semaines">
+</div>
+</div>
+<div class="form-submit">
+<button type="submit" class="btn btn-primary btn-large">Préparer ma demande sur WhatsApp</button>
+<p class="form-note"> Champs obligatoires. En cliquant, vous serez redirigé vers WhatsApp pour envoyer le message final.</p>
+</div>
+</form>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+<div class="container footer-content">
+<div class="footer-brand">
+<img src="assets/images/logo.png" alt="Logo Emeraude Agence" style="height: 40px !important; width: auto !important; max-width: 150px !important; display: block; margin-bottom: 15px;">
+<p style="margin-bottom: 15px;">Solutions intelligentes pour les entreprises.</p>
+<div class="footer-contact" style="font-size: 0.95rem; line-height: 1.8;">
+<p>📞 <a href="tel:+2290151486335" style="color: var(--or); font-weight: 600;">Appel</a> / 💬 <a href="https://wa.me/2290151486335" target="_blank" style="color: var(--or); font-weight: 600;">WhatsApp</a> : 01 51 48 63 35</p>
+<p>✉️ <a href="mailto:emeraudeagence07@gmail.com" style="color: var(--or); font-weight: 600;">Email</a> : emeraudeagence07@gmail.com</p>
+</div>
+</div>
+<div class="footer-links">
+<h4>Liens utiles</h4>
+<ul>
+<li><a href="services.html">Services</a></li>
+<li><a href="tarifs.html">Tarifs</a></li>
+<li><a href="realisations.html">Réalisations</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="confidentialite.html">Politique de confidentialité</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom"><p>© 2026 Emeraude Agence. Tous droits réservés.</p></div>
+</footer>
+<!-- WIDGET DE CHAT -->
+<div id="chat-widget-window" class="chat-widget-window">
+<div class="widget-header">
+<h4>Assistant Emeraude</h4>
+<span id="chat-widget-close" class="widget-close">×</span>
+</div>
+<div id="widget-messages" class="widget-messages">
+<div class="widget-message msg-bot">Bonjour ! Je suis l'assistant d'Emeraude Agence. Comment puis-je vous aider ?</div>
+</div>
+<div class="widget-input-area">
+<input type="text" id="widget-input" placeholder="Écrivez votre message...">
+<button id="widget-send">➤</button>
+</div>
+</div>
+<button id="chat-widget-btn" class="chat-widget-btn" aria-label="Ouvrir le chat">💬</button>
+<!-- Formulaire caché pour Google Sheets -->
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/devis.js"></script>
+</body>
+</html>

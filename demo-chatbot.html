@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Démo Assistant IA (Chatbot) | Emeraude Agence</title>
+<meta name="description" content="Testez notre assistant conversationnel interactif. Découvrez comment un chatbot peut répondre à vos clients 24h/24.">
+<link rel="icon" type="image/png" href="assets/images/favicon.png">
+<meta property="og:title" content="Démo Assistant IA (Chatbot)">
+<meta property="og:description" content="Testez notre assistant virtuel interactif.">
+<meta property="og:image" content="assets/images/partage.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/widget.css">
+</head>
+<body>
+<header class="header">
+<div class="container header-container">
+<a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Logo" class="logo-img"></a>
+<nav class="nav">
+<ul class="nav-list">
+<li><a href="index.html" class="nav-link">Accueil</a></li>
+<li><a href="services.html" class="nav-link">Services</a></li>
+<li><a href="tarifs.html" class="nav-link">Tarifs</a></li>
+<li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+<li><a href="demonstrations.html" class="nav-link active">Démonstrations</a></li>
+<li><a href="a-propos.html" class="nav-link">À propos</a></li>
+</ul>
+</nav>
+<div class="header-actions">
+<a href="devis.html" class="btn btn-primary hidden-mobile">Demander un devis</a>
+<button class="menu-toggle" id="menu-toggle"><span></span><span></span><span></span></button>
+</div>
+</div>
+<div class="mobile-menu" id="mobile-menu">
+<ul>
+<li><a href="index.html" class="nav-link">Accueil</a></li>
+<li><a href="services.html" class="nav-link">Services</a></li>
+<li><a href="tarifs.html" class="nav-link">Tarifs</a></li>
+<li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+<li><a href="demonstrations.html" class="nav-link active">Démonstrations</a></li>
+<li><a href="a-propos.html" class="nav-link">À propos</a></li>
+<li><a href="devis.html" class="btn btn-primary" style="margin-top: 10px;">Demander un devis</a></li>
+</ul>
+</div>
+</header>
+
+<main>
+<section class="page-header">
+<div class="container text-center">
+<h1>Assistant IA (Démonstration)</h1>
+<p>Discutez avec notre assistant pour découvrir comment nous pouvons répondre aux questions de vos clients.</p>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="chat-wrapper">
+<div class="chat-header">
+<div class="chat-avatar">🤖</div>
+<div>
+<h3>Assistant Emeraude</h3>
+<p class="chat-status"><span class="status-dot"></span> En ligne</p>
+</div>
+</div>
+<div class="chat-messages" id="chat-messages">
+<div class="message bot-message">
+Bonjour ! Je suis l'assistant d'Emeraude Agence. Comment puis-je vous aider aujourd'hui ? (Ex: "Quels sont vos services ?", "Je veux un devis")
+</div>
+</div>
+<div class="chat-input-area">
+<input type="text" id="chat-input" placeholder="Écrivez votre message ici..." autocomplete="off">
+<button id="chat-send" class="btn btn-primary">Envoyer</button>
+</div>
+</div>
+<div class="demo-note text-center mt-20">
+<p><strong>Note :</strong> Cette démonstration utilise des réponses prédéfinies. Une version avancée connectée à une véritable IA peut être développée sur mesure pour votre entreprise.</p>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+<div class="container footer-content">
+<div class="footer-brand">
+<img src="assets/images/logo.png" alt="Logo Emeraude Agence" style="height: 40px !important; width: auto !important; max-width: 150px !important; display: block; margin-bottom: 15px;">
+<p style="margin-bottom: 15px;">Solutions intelligentes pour les entreprises.</p>
+<div class="footer-contact" style="font-size: 0.95rem; line-height: 1.8;">
+<p>📞 <a href="tel:+2290151486335" style="color: var(--or); font-weight: 600;">Appel</a> / 💬 <a href="https://wa.me/2290151486335" target="_blank" style="color: var(--or); font-weight: 600;">WhatsApp</a> : 01 51 48 63 35</p>
+<p>✉️ <a href="mailto:emeraudeagence07@gmail.com" style="color: var(--or); font-weight: 600;">Email</a> : emeraudeagence07@gmail.com</p>
+</div>
+</div>
+<div class="footer-links">
+<h4>Liens utiles</h4>
+<ul>
+<li><a href="services.html">Services</a></li>
+<li><a href="tarifs.html">Tarifs</a></li>
+<li><a href="realisations.html">Réalisations</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="confidentialite.html">Politique de confidentialité</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom"><p>© 2026 Emeraude Agence. Tous droits réservés.</p></div>
+</footer>
+<!-- WIDGET DE CHAT -->
+<div id="chat-widget-window" class="chat-widget-window">
+<div class="widget-header">
+<h4>Assistant Emeraude</h4>
+<span id="chat-widget-close" class="widget-close">×</span>
+</div>
+<div id="widget-messages" class="widget-messages">
+<div class="widget-message msg-bot">Bonjour ! Je suis l'assistant d'Emeraude Agence. Comment puis-je vous aider ?</div>
+</div>
+<div class="widget-input-area">
+<input type="text" id="widget-input" placeholder="Écrivez votre message...">
+<button id="widget-send">➤</button>
+</div>
+</div>
+<button id="chat-widget-btn" class="chat-widget-btn" aria-label="Ouvrir le chat">💬</button>
+<script src="js/config.js"></script><script src="js/main.js"></script><script src="js/chatbot.js"></script>
+</body>
+</html>
