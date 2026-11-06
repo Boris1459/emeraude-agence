@@ -1,0 +1,169 @@
+/* =========================================
+WIDGET DE CHAT FLOTTANT
+========================================= */
+
+/* Le bouton flottant */
+.chat-widget-btn {
+position: fixed;
+bottom: 30px;
+right: 30px;
+width: 60px;
+height: 60px;
+background-color: var(--vert-emeraude);
+color: var(--blanc);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.8rem;
+box-shadow: 0 4px 15px rgba(15, 107, 79, 0.4);
+cursor: pointer;
+z-index: 9999;
+transition: transform 0.3s ease, background-color 0.3s ease;
+border: 2px solid var(--or);
+}
+
+.chat-widget-btn:hover {
+transform: scale(1.1);
+background-color: var(--vert-fonce);
+}
+
+/* La fenêtre de chat */
+.chat-widget-window {
+position: fixed;
+bottom: 100px;
+right: 30px;
+width: 350px;
+height: 500px;
+background-color: var(--blanc);
+border-radius: 12px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+display: flex;
+flex-direction: column;
+z-index: 9998;
+overflow: hidden;
+opacity: 0;
+visibility: hidden;
+transform: translateY(20px);
+transition: all 0.3s ease;
+border: 1px solid #e0e0e0;
+}
+
+/* Classe pour ouvrir le chat */
+.chat-widget-window.open {
+opacity: 1;
+visibility: visible;
+transform: translateY(0);
+}
+
+/* En-tête du chat */
+.widget-header {
+background-color: var(--vert-fonce);
+color: var(--blanc);
+padding: 15px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.widget-header h4 {
+color: var(--blanc);
+font-size: 1rem;
+margin: 0;
+}
+
+.widget-close {
+cursor: pointer;
+font-size: 1.5rem;
+color: var(--blanc);
+opacity: 0.8;
+}
+
+.widget-close:hover {
+opacity: 1;
+}
+
+/* Zone des messages */
+.widget-messages {
+flex: 1;
+padding: 15px;
+overflow-y: auto;
+background-color: #f9f9f9;
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.widget-message {
+max-width: 85%;
+padding: 10px 14px;
+border-radius: 10px;
+font-size: 0.9rem;
+line-height: 1.4;
+}
+
+.msg-bot {
+background-color: var(--blanc);
+color: var(--gris-texte);
+align-self: flex-start;
+border-bottom-left-radius: 2px;
+border: 1px solid #e0e0e0;
+}
+
+.msg-user {
+background-color: var(--vert-emeraude);
+color: var(--blanc);
+align-self: flex-end;
+border-bottom-right-radius: 2px;
+}
+
+/* Zone de saisie */
+.widget-input-area {
+display: flex;
+padding: 10px;
+background: var(--blanc);
+border-top: 1px solid #e0e0e0;
+gap: 8px;
+}
+
+.widget-input-area input {
+flex: 1;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 20px;
+font-family: var(--font-main);
+font-size: 0.9rem;
+outline: none;
+}
+
+.widget-input-area input:focus {
+border-color: var(--vert-emeraude);
+}
+
+.widget-input-area button {
+background-color: var(--vert-emeraude);
+color: var(--blanc);
+border: none;
+border-radius: 50%;
+width: 40px;
+height: 40px;
+cursor: pointer;
+font-size: 1.2rem;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+/* Responsive : sur téléphone, le chat prend plus de place */
+@media (max-width: 768px) {
+.chat-widget-window {
+width: calc(100% - 40px);
+right: 20px;
+bottom: 90px;
+height: 60vh;
+}
+.chat-widget-btn {
+bottom: 20px;
+right: 20px;
+}
+}
