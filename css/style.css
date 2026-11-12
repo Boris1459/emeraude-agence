@@ -18,6 +18,7 @@ padding: 0;
 box-sizing: border-box;
 }
 
+/* CORRECTION DU DÉCALAGE : 100% au lieu de 100vw */
 html, body {
 font-family: var(--font-main);
 color: var(--gris-texte);
@@ -25,19 +26,19 @@ line-height: 1.6;
 background-color: var(--blanc);
 overflow-x: hidden !important;
 width: 100%;
-max-width: 100vw;
+max-width: 100%;
 }
 
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 
-/* SÉCURITÉ POUR LE TEXTE */
-h1, h2, h3, h4, p, span, a, li {
+/* SÉCURITÉ POUR LE TEXTE /
+h1, h2, h3, h4, p, span, a, li, label {
 color: var(--vert-fonce);
 line-height: 1.2;
 word-wrap: break-word !important;
 overflow-wrap: break-word !important;
-hyphens: auto;
+hyphens: none; / On enlève la césure qui coupe les mots bizarrement */
 }
 
 .text-gold { color: var(--or); }
@@ -136,7 +137,6 @@ hyphens: auto;
 .mobile-menu.active { display: block; }
 .mobile-menu ul { display: flex; flex-direction: column; gap: 15px; }
 
-/* ON PASSE LE MENU MOBILE À 992px POUR ÉVITER QUE LE MENU DÉBORDE */
 @media (max-width: 992px) {
 .nav { display: none !important; }
 .menu-toggle { display: flex !important; }
@@ -203,16 +203,16 @@ hyphens: auto;
 /* =========================================
 14. PAGE DEVIS
 ========================================= /
-.form-container { max-width: 800px; margin: 0 auto; background: var(--blanc); padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 5px solid var(--vert-emeraude); width: 100%; box-sizing: border-box; }
+.form-container { max-width: 800px; margin: 0 auto; background: var(--blanc); padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 5px solid var(--vert-emeraude); width: 100%; }
 .devis-form { display: flex; flex-direction: column; gap: 20px; width: 100%; }
 .form-row { display: flex; gap: 20px; width: 100%; }
 .form-row .form-group { flex: 1; width: 100%; min-width: 0; } / min-width: 0 empêche l'input de forcer la largeur */
 .form-group { display: flex; flex-direction: column; width: 100%; }
 .form-group label { font-weight: 600; margin-bottom: 8px; color: var(--vert-fonce); font-size: 0.95rem; }
-.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 15px; border: 1px solid #ccc; border-radius: 6px; font-family: var(--font-main); font-size: 1rem; transition: border-color 0.3s ease; box-sizing: border-box; }
+.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 15px; border: 1px solid #ccc; border-radius: 6px; font-family: var(--font-main); font-size: 1rem; transition: border-color 0.3s ease; }
 .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--vert-emeraude); box-shadow: 0 0 0 3px rgba(15, 107, 79, 0.1); }
 .form-submit { text-align: center; margin-top: 20px; width: 100%; }
-.btn-large { width: 100%; padding: 15px; font-size: 1.1rem; box-sizing: border-box; }
+.btn-large { width: 100%; padding: 15px; font-size: 1.1rem; }
 .form-note { margin-top: 15px; font-size: 0.85rem; color: #777; }
 
 /* =========================================
@@ -261,7 +261,7 @@ hyphens: auto;
 .bot-message { background: var(--blanc); color: var(--gris-texte); border: 1px solid #e0e0e0; align-self: flex-start; border-bottom-left-radius: 2px; }
 .user-message { background: var(--vert-emeraude); color: var(--blanc); align-self: flex-end; border-bottom-right-radius: 2px; }
 .chat-input-area { display: flex; padding: 15px; background: var(--blanc); border-top: 1px solid #e0e0e0; gap: 10px; }
-.chat-input-area input { flex: 1; padding: 12px 15px; border: 1px solid #ccc; border-radius: 30px; font-family: var(--font-main); outline: none; width: 100%; box-sizing: border-box; }
+.chat-input-area input { flex: 1; padding: 12px 15px; border: 1px solid #ccc; border-radius: 30px; font-family: var(--font-main); outline: none; }
 .chat-input-area input:focus { border-color: var(--vert-emeraude); }
 .chat-input-area button { border-radius: 30px; padding: 10px 25px; }
 .typing-indicator { display: flex; gap: 4px; padding: 10px 15px; background: var(--blanc); border-radius: 12px; border-bottom-left-radius: 2px; align-self: flex-start; border: 1px solid #e0e0e0; }
@@ -310,7 +310,7 @@ blockquote { background: var(--gris-clair); border-left: 4px solid var(--or); pa
 .workflow-arrow { font-size: 2rem; color: #ccc; transition: color 0.3s ease; }
 .workflow-arrow.active { color: var(--vert-emeraude); }
 .workflow-results { display: flex; flex-direction: column; gap: 15px; width: 100%; max-width: 320px; }
-.result-card { background: var(--blanc); border-left: 4px solid #ccc; padding: 15px 20px; border-radius: 4px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); font-size: 0.9rem; font-weight: 500; color: #555; opacity: 0.4; transition: all 0.4s ease; display: flex; align-items: center; gap: 10px; width: 100%; box-sizing: border-box; }
+.result-card { background: var(--blanc); border-left: 4px solid #ccc; padding: 15px 20px; border-radius: 4px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); font-size: 0.9rem; font-weight: 500; color: #555; opacity: 0.4; transition: all 0.4s ease; display: flex; align-items: center; gap: 10px; width: 100%; }
 .result-card.active { opacity: 1; border-left-color: var(--vert-emeraude); background: #f4f9f7; transform: translateX(10px); }
 .spin-effect.active { animation: spin 2s linear infinite; }
 @keyframes spin { 100% { transform: rotate(360deg); } }
@@ -318,7 +318,7 @@ blockquote { background: var(--gris-clair); border-left: 4px solid var(--or); pa
 /* =========================================
 20. PAGE CONFIDENTIALITÉ
 ========================================= */
-.legal-content { max-width: 800px; margin: 0 auto; background: var(--blanc); padding: 40px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); width: 100%; box-sizing: border-box; }
+.legal-content { max-width: 800px; margin: 0 auto; background: var(--blanc); padding: 40px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); width: 100%; }
 .legal-content h2 { color: var(--vert-emeraude); font-size: 1.4rem; margin-top: 30px; margin-bottom: 15px; }
 .legal-content h2:first-child { margin-top: 0; }
 .legal-content p { color: #444; margin-bottom: 15px; line-height: 1.7; }
@@ -342,15 +342,14 @@ blockquote { background: var(--gris-clair); border-left: 4px solid var(--or); pa
 .pricing-features li::before { content: '✓'; color: var(--or); position: absolute; left: 0; font-weight: bold; }
 .pricing-note { font-size: 0.85rem; color: #888; font-style: italic; margin-bottom: 15px; background: var(--gris-clair); padding: 10px; border-radius: 6px; }
 .highlight-card-plan { border: 2px solid var(--or); background: linear-gradient(to bottom, #ffffff, #fdfbf2); }
-.packs-combines { background: var(--gris-clair); padding: 40px; border-radius: 16px; margin-top: 60px; width: 100%; box-sizing: border-box; }
+.packs-combines { background: var(--gris-clair); padding: 40px; border-radius: 16px; margin-top: 60px; width: 100%; }
 .combo-card { border: 2px solid var(--or); background: var(--blanc); }
 .save-badge { position: absolute; top: -12px; right: 20px; background: #e11d48; color: var(--blanc); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; box-shadow: 0 4px 10px rgba(225, 29, 72, 0.3); }
-.terms-box { background: var(--blanc); border-left: 4px solid var(--vert-emeraude); padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); width: 100%; box-sizing: border-box; }
+.terms-box { background: var(--blanc); border-left: 4px solid var(--vert-emeraude); padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); width: 100%; }
 .terms-box h3 { margin-bottom: 15px; color: var(--vert-fonce); }
 .terms-box ul { list-style-type: disc; margin-left: 20px; color: #555; line-height: 1.8; }
 .terms-box li { margin-bottom: 10px; }
 
-/* CORRECTION DES BOUTONS DANS LES CARTES TARIFS */
 .pricing-card .btn { display: block !important; width: 100% !important; box-sizing: border-box !important; padding: 12px 10px !important; }
 
 /* =========================================
@@ -372,7 +371,7 @@ width: 100% !important;
 gap: 20px;
 }
 
-/* ON FORCE LES CHAMPS DU FORMULAIRE À S'EMPILER (Le problème de ta capture) */
+/* ON FORCE LES CHAMPS DU FORMULAIRE À S'EMPILER */
 .form-row {
 display: flex !important;
 flex-direction: column !important;
@@ -392,7 +391,18 @@ align-items: center !important;
 width: 100% !important;
 }
 
-/* On annule les marges négatives ou les tailles fixes */
+/* On réduit les paddings pour les petits écrans */
+.service-card,
+.demo-card,
+.pricing-card,
+.contact-card,
+.form-container,
+.legal-content,
+.packs-combines,
+.terms-box {
+padding: 20px !important;
+}
+
 .hero-title { font-size: 2rem !important; padding: 0 10px; }
 .page-header h1 { font-size: 2rem !important; padding: 0 10px; }
 .section-header h2 { font-size: 1.8rem !important; padding: 0 10px; }
@@ -411,7 +421,6 @@ text-align: left !important;
 
 .logo-img { height: 35px !important; }
 .footer-content { grid-template-columns: 1fr !important; }
-.form-container, .legal-content, .packs-combines { padding: 20px !important; }
 
 /* La bulle de chat */
 .chat-widget-window {
@@ -425,8 +434,6 @@ bottom: 20px !important;
 right: 20px !important;
 }
 
-/* Correction des blocs services pour ne pas déborder */
 .workflow-arrow { transform: rotate(90deg) !important; }
 .result-card { max-width: 100% !important; }
-.service-detail-block { padding: 20px !important; }
 }
